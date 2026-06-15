@@ -1,59 +1,208 @@
-# Pokedex
+# Pokédex Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.0.1.
+Aplicação web desenvolvida com **Angular 22** para listar Pokémon e visualizar detalhes individuais utilizando dados da PokéAPI.
 
-## Development server
+## 📌 Sobre o projeto
 
-To start a local development server, run:
+Este projeto é uma Pokédex desenvolvida com Angular, com foco em praticar conceitos modernos do framework, como componentização, rotas, services, pipes, consumo de API externa e organização por domínio.
+
+A aplicação permite visualizar uma listagem de Pokémon e acessar uma página de detalhes para cada item.
+
+## 🚀 Tecnologias utilizadas
+
+* Angular 22
+* TypeScript
+* HTML
+* CSS
+* RxJS
+* Angular Router
+* Vitest
+* PokéAPI
+
+## 📁 Estrutura do projeto
+
+```bash
+pokedex-angular/
+├── .vscode/
+├── public/
+├── src/
+│   ├── app/
+│   │   ├── core/
+│   │   │   ├── guards/
+│   │   │   ├── interceptors/
+│   │   │   ├── models/
+│   │   │   │   ├── poke-list.model.ts
+│   │   │   │   ├── poke-result.model.ts
+│   │   │   │   └── pokemon.model.ts
+│   │   │   └── services/
+│   │   │       └── pokeService/
+│   │   │           ├── poke.service.ts
+│   │   │           └── poke.service.spec.ts
+│   │   ├── features/
+│   │   │   ├── details/
+│   │   │   │   ├── details.css
+│   │   │   │   ├── details.spec.ts
+│   │   │   │   └── details.ts
+│   │   │   └── list/
+│   │   │       ├── card/
+│   │   │       │   ├── card.css
+│   │   │       │   ├── card.spec.ts
+│   │   │       │   └── card.ts
+│   │   │       ├── list.css
+│   │   │       ├── list.spec.ts
+│   │   │       └── list.ts
+│   │   ├── shared/
+│   │   │   └── components/
+│   │   │   └── directives/
+│   │   │   └── pipes/
+│   │   │       ├── poke-img-pipe.ts
+│   │   │       └── poke-img-pipe.spec.ts
+│   │   ├── app.config.ts
+│   │   ├── app.routes.ts
+│   │   ├── app.css
+│   │   ├── app.spec.ts
+│   │   └── app.ts
+│   ├── index.html
+│   ├── main.ts
+│   └── styles.css
+├── angular.json
+├── package.json
+├── package-lock.json
+├── tsconfig.json
+├── tsconfig.app.json
+└── tsconfig.spec.json
+```
+
+## 🧩 Funcionalidades
+
+* Listagem de Pokémon
+* Exibição de cards com imagem dos Pokémon
+* Página de detalhes por Pokémon
+* Consumo de API externa
+* Organização de models, services, features e pipes
+* Pipe customizado para tratar imagem dos Pokémon
+* Rotas com Angular Router
+
+## 🌐 API utilizada
+
+Este projeto utiliza a **PokéAPI** para buscar dados dos Pokémon.
+
+Documentação:
+
+```text
+https://pokeapi.co/
+```
+
+## ⚙️ Pré-requisitos
+
+Antes de executar o projeto, é necessário ter instalado:
+
+* Node.js
+* npm
+
+Para verificar as versões instaladas:
+
+```bash
+node -v
+npm -v
+```
+
+## ▶️ Como executar o projeto
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/Kawhan/pokedex-angular.git
+```
+
+Acesse a pasta do projeto:
+
+```bash
+cd pokedex-angular
+```
+
+Instale as dependências:
+
+```bash
+npm install
+```
+
+Execute o servidor de desenvolvimento:
+
+```bash
+npm start
+```
+
+Ou, se preferir usar diretamente o Angular CLI:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Depois acesse no navegador:
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```text
+http://localhost:4200/
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🧪 Testes
+
+Para executar os testes:
 
 ```bash
-ng generate --help
+npm test
 ```
 
-## Building
+## 📦 Build
 
-To build the project run:
+Para gerar a versão de produção:
 
 ```bash
-ng build
+npm run build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Os arquivos gerados ficarão na pasta:
 
-## Running unit tests
+```text
+dist/
+```
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## 🛠️ Scripts disponíveis
 
 ```bash
-ng test
+npm start
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+Executa a aplicação em modo de desenvolvimento.
 
 ```bash
-ng e2e
+npm run build
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Gera o build da aplicação.
 
-## Additional Resources
+```bash
+npm run watch
+```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Executa o build em modo de observação para desenvolvimento.
+
+```bash
+npm test
+```
+
+Executa os testes com Vitest.
+
+## 👨‍💻 Autor
+
+Desenvolvido por **Kawhan Laurindo**.
+
+GitHub:
+
+```text
+https://github.com/Kawhan
+```
+
+## 📄 Licença
+
+Este projeto ainda não possui uma licença definida.
